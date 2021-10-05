@@ -6,6 +6,7 @@ import org.junit.Test;
 import ru.praktikumservices.qamesto.pageobject.MainPageScooter;
 
 import static com.codeborne.selenide.Selenide.open;
+import static ru.praktikumservices.qamesto.pageobject.MainPageScooter.homePageScooter;
 
 public class MainPageScooterTests {
 
@@ -19,28 +20,27 @@ public class MainPageScooterTests {
     public void checkTextUnderTheDropDownLists() {
 
         //перейти на страницу тестового стенда
-        MainPageScooter mainpage =
-                open("https://qa-scooter.praktikum-services.ru/",
-                        MainPageScooter.class);
+        //перейти на страницу тестового стенда
+        MainPageScooter mainPage = open(homePageScooter, MainPageScooter.class);
 
         //закрыть куки
-        mainpage.clickСookiesButton();
+        mainPage.clickСookiesButton();
 
         //нажать на 1-й выпадающий список и проверить на наличие текста
-        mainpage.clickDropDownListAndAssertText1();
+        mainPage.clickDropDownListAndAssertText1();
         //нажать на 2-й выпадающий список и проверить на наличие текста
-        mainpage.clickDropDownListAndAssertText2();
+        mainPage.clickDropDownListAndAssertText2();
         //нажать на 3-й выпадающий список и проверить на наличие текста
-        mainpage.clickDropDownListAndAssertText3();
+        mainPage.clickDropDownListAndAssertText3();
         //нажать на 4-й выпадающий список и проверить на наличие текста
-        mainpage.clickDropDownListAndAssertText4();
+        mainPage.clickDropDownListAndAssertText4();
         //нажать на 5-й выпадающий список и проверить на наличие текста
-        mainpage.clickDropDownListAndAssertText5();
+        mainPage.clickDropDownListAndAssertText5();
         //нажать на 6-й выпадающий список и проверить на наличие текста
-        mainpage.clickDropDownListAndAssertText6();
+        mainPage.clickDropDownListAndAssertText6();
         //нажать на 7-й выпадающий список и проверить на наличие текста
-        mainpage.clickDropDownListAndAssertText7();
+        mainPage.clickDropDownListAndAssertText7();
         //нажать на 8-й выпадающий список и проверить на наличие текста
-        mainpage.clickDropDownListAndAssertText8();
+        mainPage.clickDropDownListAndAssertText8();
     }
 }

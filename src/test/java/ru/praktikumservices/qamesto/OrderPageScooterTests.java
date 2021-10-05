@@ -7,6 +7,7 @@ import ru.praktikumservices.qamesto.pageobject.MainPageScooter;
 import ru.praktikumservices.qamesto.pageobject.OrderPageScooter;
 
 import static com.codeborne.selenide.Selenide.*;
+import static ru.praktikumservices.qamesto.pageobject.MainPageScooter.homePageScooter;
 
 
 public class OrderPageScooterTests {
@@ -21,15 +22,13 @@ public class OrderPageScooterTests {
     public void orderScooterByButtonTop() {
 
         //перейти на страницу тестового стенда
-        MainPageScooter mainpage =
-                open("https://qa-scooter.praktikum-services.ru/",
-                        MainPageScooter.class);
+        MainPageScooter mainPage = open(homePageScooter, MainPageScooter.class);
 
         //закрыть куки
-        mainpage.clickСookiesButton();
+        mainPage.clickСookiesButton();
 
         //перейти в форму заполнения заказа, через верхнюю кнопку "Заказать"
-        mainpage.clickTopOrderButton();
+        mainPage.clickTopOrderButton();
 
         OrderPageScooter fillFormPage = page(OrderPageScooter.class);
         //заполнить форму c именем, фамилией, адресов, станцией метро, номером телефона
@@ -45,15 +44,13 @@ public class OrderPageScooterTests {
     public void orderScooterByButtonBottom() {
 
         //перейти на страницу тестового стенда
-        MainPageScooter mainpage =
-                open("https://qa-scooter.praktikum-services.ru/",
-                        MainPageScooter.class);
+        MainPageScooter mainPage = open(homePageScooter, MainPageScooter.class);
 
         //закрыть куки
-        mainpage.clickСookiesButton();
+        mainPage.clickСookiesButton();
 
         //перейти в форму заполнения заказа, через нижнюю кнопку "Заказать"
-        mainpage.clickBottomOrderButton();
+        mainPage.clickBottomOrderButton();
 
         OrderPageScooter fillFormPage = page(OrderPageScooter.class);
         //заполнить форму c именем, фамилией, адресов, станцией метро, номером телефона

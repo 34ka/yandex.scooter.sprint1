@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TestsWithoutPO {
+
     @Before
     public void setup() {
         //открыть браузер в максимальном разрешении
@@ -147,11 +148,10 @@ public class TestsWithoutPO {
         //Получить текст, найти в нём цифры, цифры преобразовать в строку, удостовериться, что цифры есть.
         String windowText = $(byClassName("Order_Text__2broi")).getText();
         Pattern pattern = Pattern.compile("\\d+");
-        String text = windowText; //пример строки
-        Matcher matcher = pattern.matcher(text);
+        Matcher matcher = pattern.matcher(windowText);
         int start = 0;
         while (matcher.find(start)) {
-            String value = text.substring(matcher.start(), matcher.end());
+            String value = windowText.substring(matcher.start(), matcher.end());
             int result = Integer.parseInt(value);
             start = matcher.end();
             //преобразование числа в строку для сравнения

@@ -5,8 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageScooter {
+
+    //главная страница тестового стенда Скутер
+    public static final String homePageScooter = ("https://qa-scooter.praktikum-services.ru/");
 
     //локатор логотипа Яндекс
     @FindBy(how = How.XPATH,using = ".//img[@alt='Yandex']")
